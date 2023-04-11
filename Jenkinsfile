@@ -13,7 +13,7 @@ pipeline {
                 branch 'master'
             }
             environment {
-                DEPLOY_CREDS = credentials('webserver_deploy')
+                DEPLOY_CREDS = credentials('webserver_login')
             }
             steps {
                 echo '$DEPLOY_CREDS_USR'
