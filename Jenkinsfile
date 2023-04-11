@@ -12,8 +12,11 @@ pipeline {
             when {
                 branch 'master'
             }
+            environment {
+                DEPLOY_CREDS = credentials('web_deploy')
+            }
             steps {
-                echo 'on master branch'
+                echo '$DEPLOY_CREDS_USR'
             }
         }
     }
