@@ -8,9 +8,9 @@ pipeline {
                 archiveArtifacts artifacts: 'dist/trainSchedule.zip'
             }
         }
-        stage('Staging') {
+        stage('DeployToStaging') {
             when {
-                branch master
+                branch 'master'
             }
             steps {
                 echo 'on master branch'
