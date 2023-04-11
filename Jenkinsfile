@@ -8,5 +8,11 @@ pipeline {
                 archiveArtifacts artifacts: 'dist/trainSchedule.zip'
             }
         }
+        stage ('Staging') {
+            when {
+                branch master
+            }
+            echo 'on master branch'
+        }
     }
 }
