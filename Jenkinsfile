@@ -12,7 +12,9 @@ pipeline {
             when {
                 branch master
             }
-            echo 'on master branch'
+            steps {
+                echo 'on master branch'
+            }
         }
     }
 }
