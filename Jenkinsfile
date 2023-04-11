@@ -16,7 +16,7 @@ pipeline {
                 DEPLOY_CREDS = credentials('webserver_login')
             }
             steps {
-                echo '$DEPLOY_CREDS_USR'
+                echo "$DEPLOY_CREDS_USR"
             }
         }
     }
